@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motocykle</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<div class="box-area">
+  <header style="position: relative">
+    <div class="wrapper">
+      <div class="logo">
+        <a href="index.html">Motocykle</a>
+      </div>
+      <nav id="menu1">
+        <a href="index.html" class="nie_tera">Home</a>
+        <a href="index2.html" class="nie_tera">O mnie</a>
+        <a href="index3.html" class="nie_tera">Cruiser</a>
+        <a href="index4.html" class="nie_tera">Cross</a>
+        <a href="index5.html" class="nie_tera">Naked</a>
+        <a href="index6.html" class="tera">Kontakt</a>
+      </nav>
+      <div class="burger"><div class="burger-btn"></div></div>
+      <nav id="menu2">
+        <a href="index.html" class="nie_tera">Home</a><br><br><br>
+        <a href="index2.html" class="nie_tera">O mnie</a><br><br><br>
+        <a href="index3.html" class="nie_tera">Cruiser</a><br><br><br>
+        <a href="index4.html" class="nie_tera">Cross</a><br><br><br>
+        <a href="index5.html" class="nie_tera">Naked</a><br><br><br>
+        <a href="index6.html" class="tera">Kontakt</a><br><br><br>
+      </nav>
+    </div>
+  </header>
+    <div class="news">
+      <div class="kontakt">
+        <h2>Skontaktuj się z nami!</h2>
+        <p><b>Tel:</b> +48 123 456 789</p>
+        <p><b>e-mail:</b> kontakt@motocykle.pl</p><br>
+        <h3>Formularz kontaktowy:</h3>
+        <form action="index6.html" method="post">
+          <textarea class="wiadomosc" name="wiadomosc" placeholder="Napisz tutaj..."></textarea>
+          <p>Podaj e-mail:</p>
+          <input class="email" type="email" placeholder="example@email.com" required><br>
+          <input type="checkbox" name="checkbox" /> Chcę otrzymywać newsletter<br><br>
+          <div id="przycisk">
+            <button id="guzik">Wyślij</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+<a href="#" class="to-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+<div class="dark">
+  <p id="dark_mode-btn">Ciemny motyw<p/>
+</div>
+<script src="dark_mode.js"></script>
+<script src="to_top.js"></script>
+<script src="burger_menu.js"></script>
+</body>
+</html>

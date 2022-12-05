@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motocykle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<div class="box-area">
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="index.html">Motocykle</a>
+            </div>
+            <nav id="menu1">
+                <a href="index.html" class="nie_tera">Home</a>
+                <a href="index2.html" class="nie_tera">O mnie</a>
+                <a href="index3.html" class="nie_tera">Cruiser</a>
+                <a href="index4.html" class="tera">Cross</a>
+                <a href="index5.html" class="nie_tera">Naked</a>
+                <a href="index6.html" class="nie_tera">Kontakt</a>
+            </nav>
+            <div class="burger"><div class="burger-btn"></div></div>
+            <nav id="menu2">
+                <a href="index.html" class="nie_tera">Home</a><br><br><br>
+                <a href="index2.html" class="nie_tera">O mnie</a><br><br><br>
+                <a href="index3.html" class="nie_tera">Cruiser</a><br><br><br>
+                <a href="index4.html" class="tera">Cross</a><br><br><br>
+                <a href="index5.html" class="nie_tera">Naked</a><br><br><br>
+                <a href="index6.html" class="nie_tera">Kontakt</a><br><br><br>
+            </nav>
+        </div>
+    </header>
+    <div class="banner-area">
+        <img src="foto/baner2.jpg" class="banner" alt="cross">
+        <img src="foto/baner2.jpg" class="banner" alt="cross">
+        <div class="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
+    <div class="content-area">
+        <div class="wrapper">
+            <h2>Cross i Enduro</h2>
+            <p>Motocykle używane w motocrossie są bardzo podobne do motocykli enduro. Główne różnice pomiędzy nimi to: motocykle motocrossowe nie są dopuszczone do ruchu ulicznego - nie mają oświetlenia, homologowanego wydechu, lusterek itp. - motocykle motocrossowe są lżejsze od enduro - motocykle motocrossowe mają inną charakterystykę zawieszeń, zestopniowania skrzyni biegów, przełożeń wstępnych niż enduro. Ustawienia te dostosowane są do specyfiki jazdy po torach. Motocykle enduro dostosowane są bardziej do jazdy po trudnym terenie - piaskach, błotach, wzniesieniach.</p><br>
+            <h3>Supermoto - wygląd prawie ten sam, a zastosowanie całkiem inne</h3>
+            <p><b>Supermoto</b> - rodzaj sportu motocyklowego łączący cechy wyścigów motocrossowych i drogowych, odbywających się na obu rodzajach nawierzchni na dostosowanych w tych celach torach motocyklowych i kartingowych. Jest to również nazwa klasy motocykli szosowych opartych na konstrukcji motocykli terenowych. Motocykle supermoto są fabrycznie lub indywidualnie modyfikowanymi motocyklami typu Enduro lub Cross. Główna różnica polega na zastosowaniu "małych kół" o średnicy 17 cali lub 16,5 cali, z szerokimi oponami z drogowych motocykli sportowych, poprawie układu hamulcowego i zmiany ustawień zawieszeń. Strój zawodników wygląda podobnie jak w motocrossie, lecz zamiast tekstylnych ubrań jest stosowany skórzany kombinezon.</p>
+            <input type="button" value="Pokaż porównanie" id="tab_display"/>
+            <table  id="moto_table">
+                <tr>
+                    <td class="lew"><a href="https://pl.wikipedia.org/wiki/Motocross" target="_blank" class="lin"><div class="t1"><div class="text">Cross</div></div></a></td> <td><a href="https://pl.wikipedia.org/wiki/Enduro" target="_blank" class="lin"><div class="t2"><div class="text">Enduro</div></div></a></td> <td class="pra"><a href="https://pl.wikipedia.org/wiki/Supermoto" target="_blank" class="lin"><div class="t3"><div class="text">Supermoto</div></div></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<a href="#" class="to-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+<div class="dark">
+    <p id="dark_mode-btn">Ciemny motyw<p/>
+</div>
+<script src="dark_mode.js"></script>
+<script src="to_top.js"></script>
+<script src="menu.js"></script>
+<script src="burger_menu.js"></script>
+</body>
+</html>

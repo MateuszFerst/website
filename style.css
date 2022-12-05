@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins';
+    text-align: center;
+    color: black;
+    position: center;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    position: center;
+}
+@media only screen and (max-width: 939px) {
+    .wrapper {
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 727px) {
+    .wrapper {
+        width: 98%;
+    }
+}
+
+.logo{
+    width: 30%;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+}
+@media only screen and (max-width: 939px) {
+    .logo {
+        width: 27%;
+    }
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 50px;
+    font-family: 'Pacifico';
+    color: white;
+    letter-spacing: 4px;
+}
+@media only screen and (max-width: 600px) {
+    .logo a {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+}
+
+#menu1{
+    float: right;
+    line-height: 100px;
+}
+
+.nie_tera{
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 50px;
+    font-family: 'Poppins';
+    letter-spacing: 4px;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-weight: 500;
+    transition-delay: -1s;
+}
+.tera{
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 50px;
+    font-family: 'Poppins';
+    letter-spacing: 4px;
+    color: red;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-weight: 500;
+    transition-delay: -1s;
+    background-color: white;
+}
+@media only screen and (max-width: 1250px) {
+    #menu1 a {
+        display: none;
+    }
+}
+
+#menu1 a:hover{
+    background-color: white;
+    color: red;
+    transition-duration: 2.5s;
+}
+#menu2{
+    right: 0;
+    float: right;
+    height: 10000px;
+    width: 200px;
+    top: 100px;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    display: none;
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+}
+@media screen and (max-width: 1250px){
+    #menu2.open{
+        display: block;
+    }
+}
+
+.burger{
+    display: none;
+}
+.burger-btn{
+    display: none;
+}
+@media screen and (max-width: 1250px){
+    .burger{
+        width: 100px;
+        right: -100px;
+        float: right;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 100px;
+        transition: all 0.5s ease-in-out;
+    }
+}
+@media screen and (max-width: 939px){
+    .burger{
+        right: 0;
+    }
+}
+@media screen and (max-width: 1250px){
+    .burger-btn{
+        width: 75px;
+        top: -30px;
+        height: 6px;
+        display: flex;
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 0 5px white;
+        background: white;
+        border-radius: 5px;
+    }
+    .burger-btn::before,
+    .burger-btn::after{
+        content: '';
+        position: absolute;
+        width: 75px;
+        height: 6px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 0 5px white;
+        transition: all 0.5s ease-in-out;
+    }
+    .burger-btn::before{
+        transform: translateY(-16px);
+    }
+    .burger-btn::after{
+        transform: translateY(16px);
+    }
+}
+.burger.open .burger-btn{
+    transform: translateX(-75px);
+    background: transparent;
+    box-shadow: none;
+}
+.burger.open .burger-btn::before{
+    transform: rotate(45deg) translate(50px, -50px);
+}
+.burger.open .burger-btn::after{
+    transform: rotate(-45deg) translate(50px, 50px);
+}
+
+.nie_tera{
+    top: 100px;
+    border-style: solid;
+    border-radius: 50px;
+    font-family: 'Poppins';
+    letter-spacing: 4px;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-weight: 500;
+    transition-delay: -1s;
+    text-decoration: none;
+}
+.nie_tera:hover{
+    background-color: white;
+    color: red;
+    transition-duration: 2.5s;
+}
+
+.banner-area{
+    background-size: cover;
+    background-position: center center;
+    top: 100px;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.banner{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+.arrow{
+    position: absolute;
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 1200px) {
+    .arrow {
+        display: none;
+    }
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid red;
+    border-right: 5px solid red;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -.4s;
+}
+@keyframes scroll {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+.content-area{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    background: white;
+    color: black;
+    top: 100%;
+    z-index: -1;
+}
+@media only screen and (max-width: 1200px) {
+    .content-area {
+        width: 100%;
+        height: 110%;
+        top: 100%;
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 1140px) {
+    .content-area {
+        top: 100%;
+    }
+}
+@media only screen and (max-width: 1120px) {
+    .content-area {
+        top: 90%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .content-area {
+        top: 80%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .content-area {
+        top: 70%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .content-area {
+        top: 60%;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .content-area {
+        top: 50%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .content-area {
+        top: 40%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .content-area {
+        top: 35%;
+    }
+}
+.content-area h2{
+    font-size: 30px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    letter-spacing: 4px;
+}
+
+.szkic{
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    top: -3%;
+    opacity: 0.2;
+}
+@media only screen and (max-width: 400px) {
+    .szkic {
+        top: 0;
+    }
+}
+.content-area p{
+    line-height: 30px;
+    text-align: justify;
+}
+
+.akapit{
+    text-indent: 30px;
+}
+
+.to-top {
+    background: black;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+.dark{
+    background: black;
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#tab_display, #pow_vid{
+    width: 200px;
+    height: 20px;
+    border-radius: 25px;
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    font-size: 15px;
+}
+@media only screen and (max-height: 732px) {
+    #tab_display, #pow_vid {
+        display: none;
+    }
+}
+#tab_display:hover, #pow_vid:hover{
+    background-color: red;
+    color: white;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lew{
+    border-right: 2px solid black;
+}
+.pra{
+    border-left: 2px solid black;
+}
+
+td{
+    margin: 0 auto;
+    height: 320px;
+    width: 33.3%;
+}
+
+.t1{
+    width: 100%;
+    height: 100%;
+    background-image: url("foto/cross_tab.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.t2{
+    width: 100%;
+    height: 100%;
+    background-image: url("foto/enduro_tab.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.t3{
+    width: 100%;
+    height: 100%;
+    background-image: url("foto/supermoto_tab.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.text{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-weight: 700;
+    font-size: 400%;
+    color: orange;
+}
+
+td:hover .text{
+    opacity: 0.7;
+    transition-duration: 0.4s;
+}
+
+.lin{
+    text-decoration: none;
+}
+.film_b{
+    width: 25%;
+    height: 100%;
+    opacity: 0.5;
+    margin: 0 auto;
+}
+@media only screen and (max-height: 732px) {
+    .film_b {
+        opacity: 1;
+        width: 50%;
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .film_b {
+        opacity: 1;
+        width: 80%;
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .film_b {
+        opacity: 1;
+        width: 80%;
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .film_b {
+        opacity: 1;
+        width: 80%;
+        height: 100px;
+    }
+}
+
+.film{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.news{
+    width: 100%;
+    height: 800px;
+}
+@media only screen and (max-width: 939px) {
+    .news {
+        font-size: 10px;
+    }
+}
+
+.news h2{
+    font-size: 30px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+@media only screen and (max-width: 939px) {
+    .news h2 {
+        font-size: 20px;
+    }
+}
+
+.kontakt{
+    text-align: justify;
+    position: relative;
+    background: white;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.wiadomosc{
+    border-radius: 15px;
+    padding-inline: 10px;
+    font-size: 20px;
+    border: 3px solid black;
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+@media only screen and (max-width: 350px) {
+    .wiadomosc {
+        font-size: 10px;
+    }
+}
+
+.email{
+    height: 30px;
+    width: 300px;
+    border-radius: 15px;
+    padding-inline: 10px;
+    font-size: 20px;
+    border: 3px solid black;
+}
+@media only screen and (max-width: 500px) {
+    .email {
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .email {
+        width: 150px;
+        font-size: 10px;
+    }
+}
+#przycisk{
+    text-align: center;
+}
+#guzik{
+    display: inline-block;
+    margin: 0 auto;
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 3px solid red;
+    background-color: white;
+    color: red;
+}
+@media only screen and (max-width: 350px) {
+    #guzik {
+        font-size: 10px;
+    }
+}
+#guzik:hover{
+    background-color: red;
+    color: white;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
